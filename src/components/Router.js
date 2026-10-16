@@ -5,6 +5,7 @@ import MenuComponent from "./MenuComponent";
 import CreateDepartamento from "./CreateDepartamento";
 import UpdateDepartamento from "./UpdateDepartamento";
 import DeleteDepartamento from "./DeleteDepartamento";
+import HospitalesMultiples from "./HospitalesMultiples";
 
 export default class Router extends Component {
     render() {
@@ -22,6 +23,7 @@ export default class Router extends Component {
                 <MenuComponent />
                 <Routes>
                     <Route path="/" element={<HomeComponent />} />
+                    <Route path="/hospitales" element={<HospitalesMultiples />} />
                     <Route path="/creardepartamento" element={<CreateDepartamento />} />
                     <Route path="/update/:numero/:nombre/:localidad" element={<UpdateElement />} />
                     <Route path="/delete/:numero" element={<DeleteElement />} />

@@ -37,9 +37,10 @@ export default class HomeComponent extends Component {
                         {
                             this.state.departamentos.map((dep, index) => {
                                 return (<tr key={index}>
-                                    <th>{dep.numero}</th>
-                                    <th>{dep.nombre}</th>
-                                    <th>{dep.localidad}</th>
+                                    <td>{dep.numero}</td>
+                                    <td>{dep.nombre}</td>
+                                    <td>{dep.localidad}</td>
+                                    <td>
                                     <NavLink className="btn btn-warning" to={"/update/" +  dep.numero + 
                                         "/" + dep.nombre +
                                         "/" + dep.localidad
@@ -47,10 +48,10 @@ export default class HomeComponent extends Component {
                                         Editar
                                     </NavLink>
                                     <br></br>
-                                    <NavLink className="btn btn-danger" to={/delete/ + dep.numero}>
+                                    <NavLink className="btn btn-danger" to={"/delete/" + dep.numero}>
                                         Eliminar
                                     </NavLink>
-                                </tr>)
+                                </td></tr>)
                             })
                         }
                     </tbody>
